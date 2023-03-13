@@ -46,6 +46,14 @@ void f()
         }
         myfile << endl;
     }
+    myfile.close();
+    ofstream color;
+    color.open("color.csv");
+    color<<"Index,Red,Green,Blue"<<endl;
+    for(auto i:m){
+        color<<i.second<<","<<i.first[0]<<","<<i.first[1]<<","<<i.first[2]<<endl;
+    }
+    color.close();
 }
 
 
